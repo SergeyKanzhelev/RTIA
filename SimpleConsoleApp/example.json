@@ -1,0 +1,25 @@
+﻿{
+  "name": "Microsoft.ApplicationInsights.test.RemoteDependency",
+  "time": "2016-11-18T00:24:20.0997535Z",
+  "iKey": "test",
+  "tags": {
+    "ai.internal.sdkVersion": "dotnet:2.2.0-48047",
+    "ai.internal.nodeName": "sergkanz-vm.redmond.corp.microsoft.com",
+    "ai.operation.id": "2ot/xSKqO2w=",
+    "ai.cloud.roleInstance": "sergkanz-vm.redmond.corp.microsoft.com",
+    "ai.operation.name": "Send"
+  },
+  "data": {
+    "baseType": "RemoteDependencyData",
+    "baseData": {
+      "ver": 2,
+      "name": "Send",
+      "id": "2ot/xSKqO2w=",
+      "data": "This is RTIA example",
+      "duration": "00:00:00.9100000",
+      "resultCode": "SmtpException",
+      "success": false,
+      "target": "host.myserver.abc"
+    }
+  }
+}
