@@ -64,6 +64,7 @@ namespace SimpleConsoleApp
 
             // start the operation
             var operation = new TelemetryClient().StartOperation<DependencyTelemetry>("Send");
+            operation.Telemetry.Type = "Smtp";
             operation.Telemetry.Target = ((SmtpClient)thisObj).Host;
             if (arg1 != null)
             {
