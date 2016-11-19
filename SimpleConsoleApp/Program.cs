@@ -24,6 +24,11 @@ namespace SimpleConsoleApp
                 return;
             }
 
+            Execute();
+
+            Console.WriteLine("Application started with the Runtime Instrumentation Agent enabled. Press any key to continue...");
+            Console.ReadKey();
+
             TelemetryConfiguration.Active.InstrumentationKey = "test";
 
             Console.WriteLine("Agent version: " + Decorator.GetAgentVersion());
@@ -32,7 +37,7 @@ namespace SimpleConsoleApp
             Functions.Decorate("System", "System.dll", "System.Net.Mail.SmtpClient.Send", OnBegin, OnEnd, OnException, false);
 
             // this wait is required in case you've already called "SmtpClient.Send" method before. Just give some time to requiest re-JIT
-            Thread.Sleep(1000);
+            Thread.Sleep(5000);
 
             Execute();
 
